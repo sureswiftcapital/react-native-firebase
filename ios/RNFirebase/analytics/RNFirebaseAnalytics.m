@@ -12,7 +12,9 @@ RCT_EXPORT_METHOD(logEvent:(NSString *)name props:(NSDictionary *)props) {
 }
 
 RCT_EXPORT_METHOD(setAnalyticsCollectionEnabled:(BOOL) enabled) {
-  [FIRAnalytics setAnalyticsCollectionEnabled:enabled];
+  // Removing this line as it causes the build to fail
+  // No known class method for selector 'setAnalyticsCollectionEnabled:'
+  // [FIRAnalytics setAnalyticsCollectionEnabled:enabled];
 }
 
 RCT_EXPORT_METHOD(setCurrentScreen:(NSString *) screenName screenClass:(NSString *) screenClassOverriew) {
